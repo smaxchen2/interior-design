@@ -258,7 +258,7 @@ function FurnitureMesh({ item, showLabel }: { item: FurnitureType; showLabel: bo
         <Html
           position={[0, h + 1, 0]}
           center
-          style={{ pointerEvents: 'none', whiteSpace: 'nowrap' }}
+          occlude style={{ pointerEvents: 'none', whiteSpace: 'nowrap' }}
         >
           <div style={{
             background: item.isOptimized ? 'rgba(34,120,34,0.9)' : 'rgba(60,60,60,0.88)',
@@ -305,7 +305,7 @@ function RoomLabels() {
           key={room.id}
           position={[room.center[0] * S, 0.3, room.center[1] * S]}
           center
-          style={{ pointerEvents: 'none' }}
+          occlude style={{ pointerEvents: 'none' }}
         >
           <div style={{
             color: '#777',
