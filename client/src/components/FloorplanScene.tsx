@@ -341,13 +341,20 @@ function CameraController({ activeRoom }: { activeRoom: string }) {
   }, [activeRoom, camera, preset]);
 
   return (
-    <OrbitControls
-      ref={controlsRef}
-      enableDamping
-      dampingFactor={0.05}
-      minDistance={3}
-      maxDistance={150}
-      maxPolarAngle={Math.PI / 2.05}
+  <OrbitControls
+    ref={controlsRef}
+    enableDamping
+    dampingFactor={0.05}
+    minDistance={3}
+    maxDistance={150}
+    enableRotate={true}
+    enableZoom={true}
+    enablePan={true}
+    rotateSpeed={0.8}
+    zoomSpeed={1.2}
+    panSpeed={0.8}
+    maxPolarAngle={Math.PI / 1.8}
+    minPolarAngle={0.1}
     />
   );
 }
